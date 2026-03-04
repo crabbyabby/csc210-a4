@@ -1,8 +1,18 @@
+/**
+ * Class to implement a stack
+ * @author Abigail Lei
+ * @version Spring 2026
+ */
 public class Stack<T> implements StackADT<T>{
 
+    // Attributes
     private NodeSL<T> head;
     private int size;
 
+    /**
+     * Constructor for stack
+     * sets head to null and size to 0
+     */
     Stack() {
         this.head = null;
         this.size = 0;

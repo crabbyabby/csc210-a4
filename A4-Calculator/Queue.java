@@ -1,10 +1,20 @@
+/**
+ * Class to implement a queue
+ * @author Abigail Lei
+ * @version Spring 2026
+ */
+
 public class Queue<T> implements QueueADT<T>{
 
+    // Attributes
     private NodeSL<T> head;
     private NodeSL<T> tail;
     private int size;
 
-
+    /**
+     * Constructor for queue
+     * Sets both head and tail to null, size to 0.
+     */
     Queue() {
         this.head = null;
         this.tail = null;
@@ -67,5 +77,19 @@ public class Queue<T> implements QueueADT<T>{
      * @return number of elements */
     public int size(){
         return this.size;
+    }
+
+    public void main(String[] args) {
+        Queue<Integer> stacker = new Queue<Integer>();
+        System.out.println(stacker.isEmpty());
+        stacker.enqueue(3);
+        stacker.enqueue(4);
+        stacker.enqueue(5);
+        System.out.println(stacker.peek());
+        System.out.println(stacker.size());
+        System.out.println(stacker.dequeue());
+        System.out.println(stacker.size()); 
+        System.out.println(stacker.dequeue());
+        System.out.println(stacker.dequeue());
     }
 }
