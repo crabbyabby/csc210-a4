@@ -21,5 +21,4 @@ public interface StackADT<T> {
     /** Returns number of elements in the stack
      * @return number of elements */
     public int size();
-
 }

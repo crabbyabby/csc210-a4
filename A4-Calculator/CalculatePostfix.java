@@ -1,16 +1,21 @@
-//import java.util.Queue;
-
-import java.util.Arrays;
-
+/**
+ * Class that calculates value from Postfix
+ */
 public class CalculatePostfix {
-    public static Double postfixToResult(Queue<Object> tokens) {
-        Stack<Double> answer = new Stack<Double>();
+    /**
+     * Method that calculates value from queue of postfix
+     * @param tokens queue holding equation in postfix
+     * @return Double of equation result
+     * @throws IllegalArgumentException if multiple numbers in stack at end
+     */
+    public static Double postfixToResult(QueueADT<Object> tokens) {
+        StackADT<Double> answer = new Stack<Double>();
 
         if (tokens.isEmpty()) {
             throw new IllegalArgumentException("Empty queue");
         }
 
-        while (tokens.size() > 0) {
+        while (!tokens.isEmpty()) {
             Object next = tokens.dequeue();
             if (next instanceof Double) {
                 Double numValue = Double.valueOf(next.toString());
@@ -30,6 +35,15 @@ public class CalculatePostfix {
         return answer.pop();
     }
 
+    /**
+     * 
+     * @param first
+     * @param second
+     * @param change
+     * @return
+     * @throws
+     * @throws
+     */
     public static Double compute(Double first, Double second, Character change) {
 
         if (change == '+') {
@@ -47,7 +61,6 @@ public class CalculatePostfix {
         } else {
             throw new IllegalArgumentException("Unknown operator");
         }
-
     }
 
     public static void main(String args[]){
