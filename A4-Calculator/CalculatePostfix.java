@@ -1,15 +1,18 @@
 /**
  * Class that calculates value from Postfix
+ * @author Abigail Lei
+ * @version Spring 2026
  */
 public class CalculatePostfix {
+    
     /**
      * Method that calculates value from queue of postfix
      * @param tokens queue holding equation in postfix
      * @return Double of equation result
      * @throws IllegalArgumentException if multiple numbers in stack at end
      */
-    public static Double postfixToResult(QueueADT<Object> tokens) {
-        StackADT<Double> answer = new Stack<Double>();
+    public static Double postfixToResult(Queue<Object> tokens) {
+        Stack<Double> answer = new Stack<Double>();
 
         if (tokens.isEmpty()) {
             throw new IllegalArgumentException("Empty queue");
@@ -36,13 +39,13 @@ public class CalculatePostfix {
     }
 
     /**
-     * 
-     * @param first
-     * @param second
-     * @param change
-     * @return
-     * @throws
-     * @throws
+     * Helper method that computes small expressions
+     * @param first Double in equation
+     * @param second Double in equation
+     * @param change Character operator used in equation
+     * @return Double of the answer outputted
+     * @throws IllegalArgumentException if there is division by 0
+     * @throws IllegalArgumentException if there is an unknown character
      */
     public static Double compute(Double first, Double second, Character change) {
 
@@ -69,5 +72,12 @@ public class CalculatePostfix {
         // Here's how to print the equation passed from the command line:
         // System.out.println(args[0]);
         // You will want to pass this to the Tokenizer class to parse
+            if (args.length != 1) {
+                System.err.println("Usage: java CalculatePostfix \"<postfix expr>\"");
+                return;
+            }
+            Queue<Object> tokens = Tokenizer.readTokens(args[0]);
+            Double result = postfixToResult(tokens);
+            System.out.println("Answer: " + result);
     }
 }

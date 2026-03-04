@@ -1,5 +1,7 @@
 /**
  * Interface for stack functionality
+ * @author Abigail Lei
+ * @version Spring 2026
  */
 public interface StackADT<T> {
     /** Add item onto stack

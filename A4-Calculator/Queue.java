@@ -4,7 +4,7 @@
  * @version Spring 2026
  */
 
-public class Queue<T> implements QueueADT<T>{
+public class Queue<T> implements QueueADT<T> {
 
     // Attributes
     private NodeSL<T> head;
@@ -66,7 +66,7 @@ public class Queue<T> implements QueueADT<T>{
 
     /** Returns true if there are no elements to remove
      * @return true if queue is empty, false otherwise */
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         if (this.size == 0) {
             return true;
         }
@@ -75,21 +75,7 @@ public class Queue<T> implements QueueADT<T>{
 
     /** Returns number of elements in the queue
      * @return number of elements */
-    public int size(){
+    public int size() {
         return this.size;
-    }
-
-    public void main(String[] args) {
-        Queue<Integer> stacker = new Queue<Integer>();
-        System.out.println(stacker.isEmpty());
-        stacker.enqueue(3);
-        stacker.enqueue(4);
-        stacker.enqueue(5);
-        System.out.println(stacker.peek());
-        System.out.println(stacker.size());
-        System.out.println(stacker.dequeue());
-        System.out.println(stacker.size()); 
-        System.out.println(stacker.dequeue());
-        System.out.println(stacker.dequeue());
     }
 }

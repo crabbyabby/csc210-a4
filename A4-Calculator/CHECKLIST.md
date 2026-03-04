@@ -15,77 +15,77 @@ You should also make sure that your logic and ideas are clearly expressed to ful
 ## Grade-ability Check
 Please confirm the following minimum criteria are met:
 
-_____ Program compiles without errors 
+___YES__ Program compiles without errors 
 
-_____ All required files included with submission (including basic readme info and completed checklist file) 
+___YES__ All required files included with submission (including basic readme info and completed checklist file) 
 
-_____ README.md contains answers to any questions and your reflection on the assignment 
+___YES__ README.md contains answers to any questions and your reflection on the assignment 
 
 **Assignments that do not meet the above criteria cannot be graded**
 
 
 ## Coding Points:
 
-_____ 1 pts: Code implements QueueADT<T> and StackADT<T> exactly
+___YES__ 1 pts: Code implements QueueADT<T> and StackADT<T> exactly
 
 ### Queue Implementation
 
-_____ 1 pts: enqueue(x) increases size by 1
+___YES__ 1 pts: enqueue(x) increases size by 1
 
-_____ 1 pts: dequeue() returns elements in first-in-first-out order
+___YES__ 1 pts: dequeue() returns elements in first-in-first-out order
 
-_____ 1 pts: peek() returns next element without removing it
+___YES__ 1 pts: peek() returns next element without removing it
 
-_____ 1 pts: isEmpty() and size() return correct values
+___YES__ 1 pts: isEmpty() and size() return correct values
 
-_____ 1 pts: dequeue() on empty throws required IllegalArgumentException
+___YES__ 1 pts: dequeue() on empty throws required IllegalArgumentException
 
-_____ 2 pts: Uses appropriate backing operations (no unnecessary O(n) behavior)
+___YES__ 2 pts: Uses appropriate backing operations (no unnecessary O(n) behavior)
 
 ### Stack Implementation
 
-_____ 1 pts: push(x) increases size by 1
+___YES__ 1 pts: push(x) increases size by 1
 
-_____ 1 pts: pop() returns elements in last-in-first-out order
+___YES__ 1 pts: pop() returns elements in last-in-first-out order
 
-_____ 1 pts: peek() returns next element without removing it
+___YES__ 1 pts: peek() returns next element without removing it
 
-_____ 1 pts: isEmpty() and size() return correct values
+___YES__ 1 pts: isEmpty() and size() return correct values
 
-_____ 1 pts: pop() on empty throws IllegalArgumentException
+___YES__ 1 pts: pop() on empty throws IllegalArgumentException
 
-_____ 2 pts: Uses appropriate backing operations (no unnecessary O(n) behavior)
+___YES__ 2 pts: Uses appropriate backing operations (no unnecessary O(n) behavior)
 
 ### PostFix
 
-_____ 1 pts: Pushes numeric tokens onto the stack
+___YES__ 1 pts: Pushes numeric tokens onto the stack
 
-_____ 2 pts: Processes operators by popping & combining numbers
+___YES__ 2 pts: Processes operators by popping & combining numbers
 
-_____ 2 pts: Produces correct answer to any valid postfix expression
+___YES__ 2 pts: Produces correct answer to any valid postfix expression
 
-_____ 1 pts: Throws an exception with an informative error message in case of malformed expressions
+___YES__ 1 pts: Throws an exception with an informative error message in case of malformed expressions
 
 
 ## Code Hygiene (4 pts):
 
-____ 1 pt: No copy/paste near-duplicate code blocks for the same behavior (reusing your code is better for everyone!)
+__YES__ 1 pt: No copy/paste near-duplicate code blocks for the same behavior (reusing your code is better for everyone!)
 
-_____ 1 pt: Common logic is factored into helpers 
+___YES__ 1 pt: Common logic is factored into helpers 
 
-_____ 1 pt: Methods are short enough to read (no 100-line monster methods unless justified)
+___YES__ 1 pt: Methods are short enough to read (no 100-line monster methods unless justified)
 
-_____ 1 pt: Names communicate intent (especially for helper methods)
+___YES__ 1 pt: Names communicate intent (especially for helper methods)
 
 ### Kudos:
-_____ 0 pt: Evaluation of InFix expressions is attempted with the Shunting Yard Algorithm (code compiles and shows meaningful progress)
+___NO__ 0 pt: Evaluation of InFix expressions is attempted with the Shunting Yard Algorithm (code compiles and shows meaningful progress)
 
 ## General Items (6 pts):
 
-_____ 1 pt: Student-written code compiles without warnings that indicate correctness problems
+___YES__ 1 pt: Student-written code compiles without warnings that indicate correctness problems
 
-_____ 2 pts: Student-provided code runs and executes without unexpected crashing
+___YES__ 2 pts: Student-provided code runs and executes without unexpected crashing
 
-_____ 2 pt: Javadoc builds without errors/warnings
+___YES__ 2 pt: Javadoc builds without errors/warnings
 
-_____ 1 pt: Indentation and other style norms are followed
+___YES__ 1 pt: Indentation and other style norms are followed

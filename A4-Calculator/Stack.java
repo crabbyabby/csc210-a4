@@ -3,7 +3,7 @@
  * @author Abigail Lei
  * @version Spring 2026
  */
-public class Stack<T> implements StackADT<T>{
+public class Stack<T> implements StackADT<T> {
 
     // Attributes
     private NodeSL<T> head;
@@ -71,19 +71,5 @@ public class Stack<T> implements StackADT<T>{
      * @return number of elements */
     public int size() {
         return this.size;
-    }
-
-    public void main(String[] args) {
-        Stack<Integer> stacker = new Stack<Integer>();
-        System.out.println(stacker.isEmpty());
-        stacker.push(3);
-        stacker.push(4);
-        stacker.push(5);
-        System.out.println(stacker.peek());
-        System.out.println(stacker.size());
-        System.out.println(stacker.pop());
-        System.out.println(stacker.size());
-        System.out.println(stacker.pop());
-        System.out.println(stacker.pop());
     }
 }

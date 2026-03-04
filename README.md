@@ -14,12 +14,12 @@ https://stackoverflow.com/questions/7503877/java-correct-way-convert-cast-object
 
 Which backing structure did you choose for your Stack/Queue (SLL or DynamicArray), and why? 
 
-I chose to use a SLL mainly because I would not have to resize the backing array.
-
+I chose to use a SLL mainly because I would not have to resize the backing array. It also made much more sense to me mainly because I chose to track the tail.
 
 What is the runtime cost of each primary operation (push/pop/peek for Stack; enqueue/dequeue/peek for Queue) with your choice?
+Because I chose to track the tail, all runtimes are O(1). Since access for the stack is from one end, pushing, popping, and peeking from the head allows the implementation to be O(1). For queue, I added from the tail and popped from the head so that it would remain O(1).
 
 ## Reflection
 
-Reflection on your experience with this assignment:
+Reflection on your experience with this assignment: I liked this assignment, especially creating the stacks and queues implementations. Felt nice to not turn something in 3 days late which made the experience more enjoyable.
 
