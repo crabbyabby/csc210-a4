@@ -10,6 +10,7 @@ public class CalculatePostfix {
      * @param tokens queue holding equation in postfix
      * @return Double of equation result
      * @throws IllegalArgumentException if multiple numbers in stack at end
+     * @throws IllegalArgumentException if not enough numbers for expression
      */
     public static Double postfixToResult(Queue<Object> tokens) {
         Stack<Double> answer = new Stack<Double>();
@@ -24,6 +25,9 @@ public class CalculatePostfix {
                 Double numValue = Double.valueOf(next.toString());
                 answer.push(numValue);
             } else if (next instanceof Character) {
+                if (answer.size() < 2) {
+                    throw new IllegalArgumentException("Malformed expression");
+                }
                 Double second = answer.pop();
                 Double first = answer.pop();
                 Double newNumber = compute(first, second, (Character) next);
@@ -66,6 +70,10 @@ public class CalculatePostfix {
         }
     }
 
+    /**
+     * Main method to test code from command line
+     * @param args the lines of code
+     */
     public static void main(String args[]){
         // Use the main method to make your code run from the command line
 

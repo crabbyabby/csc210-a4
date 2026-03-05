@@ -36,7 +36,7 @@ public class Stack<T> implements StackADT<T> {
      * @return element at top of stack */
     public T pop() {
         if (isEmpty()) {
-            throw new IndexOutOfBoundsException("Cannot pop empty stack.");
+            throw new IndexOutOfBoundsException("Cannot pop from an empty stack.");
         } else {
             T data = this.head.getData();
             this.head = this.head.getNext();
@@ -51,7 +51,7 @@ public class Stack<T> implements StackADT<T> {
      */
     public T peek() {
         if (isEmpty()) {
-            throw new IndexOutOfBoundsException("Cannot peek empty stack.");
+            throw new IndexOutOfBoundsException("Cannot peek an empty stack.");
         } else {
             return this.head.getData();
         }
